@@ -10,20 +10,32 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<MongoDBSettings>(
     builder.Configuration.GetSection("MongoDB"));
 
+// Configurar CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigins",
+        builder =>
+        {
+            builder.WithOrigins("https://example.com") // Permitir un origen específico
+                   .AllowAnyMethod()
+                   .AllowAnyHeader()
+                   .AllowCredentials(); // Permitir credenciales
+        });
+});
+
+
+// Configurar servicios y controladores
+builder.Services.AddControllers();
+
+// Configurar el cliente MongoDB
 builder.Services.AddSingleton<IMongoClient>(s =>
 {
     var settings = s.GetRequiredService<IOptions<MongoDBSettings>>().Value;
     return new MongoClient(settings.ConnectionString);
 });
 
-// Add specific services.
-builder.Services.AddSingleton<EquipoService>();
-builder.Services.AddSingleton<ParticipanteService>();
-builder.Services.AddSingleton<ActividadService>();
+// Agregar servicios específicos
 builder.Services.AddSingleton<EventoService>();
-builder.Services.AddSingleton<FixtureService>();
-// Add services to the container.
-builder.Services.AddControllers();
 
 // Configurar Swagger
 builder.Services.AddEndpointsApiExplorer();
@@ -31,12 +43,15 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configurar el pipeline de solicitudes
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Aplicar CORS
+app.UseCors("AllowAllOrigins");
 
 app.UseAuthorization();
 

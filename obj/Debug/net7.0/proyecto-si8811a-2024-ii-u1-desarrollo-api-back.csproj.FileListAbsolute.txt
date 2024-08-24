@@ -43,3 +43,4 @@ C:\Users\HP\Desktop\aaa\proyecto-si8811a-2024-ii-u1-desarrollo-api-back\obj\Debu
 C:\Users\HP\Desktop\aaa\proyecto-si8811a-2024-ii-u1-desarrollo-api-back\obj\Debug\net7.0\proyecto-si8811a-2024-ii-u1-desarrollo-api-back.pdb
 C:\Users\HP\Desktop\aaa\proyecto-si8811a-2024-ii-u1-desarrollo-api-back\obj\Debug\net7.0\proyecto-si8811a-2024-ii-u1-desarrollo-api-back.genruntimeconfig.cache
 C:\Users\HP\Desktop\aaa\proyecto-si8811a-2024-ii-u1-desarrollo-api-back\obj\Debug\net7.0\ref\proyecto-si8811a-2024-ii-u1-desarrollo-api-back.dll
+C:\Users\HP\Desktop\aaa\proyecto-si8811a-2024-ii-u1-desarrollo-api-back\bin\Debug\net7.0\System.Web.Cors.dll
