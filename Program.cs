@@ -13,16 +13,14 @@ builder.Services.Configure<MongoDBSettings>(
 // Configurar CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecificOrigins",
+    options.AddPolicy("AllowAllOrigins",
         builder =>
         {
-            builder.WithOrigins("https://example.com") // Permitir un origen específico
+            builder.AllowAnyOrigin()
                    .AllowAnyMethod()
-                   .AllowAnyHeader()
-                   .AllowCredentials(); // Permitir credenciales
+                   .AllowAnyHeader();
         });
 });
-
 
 // Configurar servicios y controladores
 builder.Services.AddControllers();
@@ -34,7 +32,7 @@ builder.Services.AddSingleton<IMongoClient>(s =>
     return new MongoClient(settings.ConnectionString);
 });
 
-// Agregar servicios específicos
+// Agregar servicios especÃ­ficos
 builder.Services.AddSingleton<EventoService>();
 
 // Configurar Swagger
