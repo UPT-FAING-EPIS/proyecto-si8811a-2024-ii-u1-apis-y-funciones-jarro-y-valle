@@ -55,4 +55,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.Urls.Add("http://0.0.0.0:9090");
+
 app.Run();
