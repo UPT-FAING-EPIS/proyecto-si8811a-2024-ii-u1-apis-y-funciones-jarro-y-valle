@@ -1,4 +1,4 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
 
 namespace proyecto_si8811a_2024_ii_u1_desarrollo_api_back.Models
@@ -10,9 +10,10 @@ namespace proyecto_si8811a_2024_ii_u1_desarrollo_api_back.Models
         public string? Id { get; set; }
 
         public string Nombre { get; set; }
-        public List<string> Equipos { get; set; }
-        public string ResultadoId { get; set; }
-        public string FixtureId { get; set; }
-        public List<string> Actividades { get; set; }
+
+        public DateTime FechaInicio { get; set; }
+        public DateTime FechaTermino { get; set; }
+
+        public string Facultad { get; set; }
     }
 }
