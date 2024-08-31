@@ -1,5 +1,5 @@
-docker build -t mi-proyecto-api .
+docker build -t eventos_vj .
 
-docker run -d -p 8080:80 mi-proyecto-api
+docker run -d -p 9091:80 eventos_vj
 
-http://localhost:8080/swagger
+http://localhost:9091/swagger

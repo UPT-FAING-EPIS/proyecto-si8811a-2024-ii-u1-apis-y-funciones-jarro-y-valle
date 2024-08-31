@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using proyecto_si8811a_2024_ii_u1_desarrollo_api_back.Models;
-using proyecto_si8811a_2024_ii_u1_desarrollo_api_back.Services;
+using proyecto_si8811a_2024_ii_u1_apis_y_funciones_jarro_y_valle.Models;
+using proyecto_si8811a_2024_ii_u1_apis_y_funciones_jarro_y_valle.Services;
 
-namespace proyecto_si8811a_2024_ii_u1_desarrollo_api_back.Controllers
+namespace proyecto_si8811a_2024_ii_u1_apis_y_funciones_jarro_y_valle.Controllers
 {
     [ApiController]
     [Route("[controller]")]

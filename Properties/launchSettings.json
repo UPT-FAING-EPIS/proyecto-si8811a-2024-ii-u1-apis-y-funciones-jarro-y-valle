@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "http": {
+    "proyecto_si8811a_2024_ii_u1_apis_y_funciones_jarro_y_valle": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
@@ -8,7 +8,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "http://localhost:5288"
+      "applicationUrl": "http://localhost:5298"
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -23,17 +23,17 @@
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
       "environmentVariables": {
-        "ASPNETCORE_HTTP_PORTS": "8080"
+        "ASPNETCORE_HTTP_PORTS": "9091"
       },
       "publishAllPorts": true
     }
   },
-  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "$schema": "https://json.schemastore.org/launchsettings.json",
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:50995",
+      "applicationUrl": "http://localhost:33041",
       "sslPort": 0
     }
   }

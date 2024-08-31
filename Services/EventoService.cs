@@ -1,9 +1,11 @@
 ﻿using Microsoft.Extensions.Options;
 using MongoDB.Driver;
-using proyecto_si8811a_2024_ii_u1_desarrollo_api_back.Models;
-using proyecto_si8811a_2024_ii_u1_desarrollo_api_back.Settings;
+using proyecto_si8811a_2024_ii_u1_apis_y_funciones_jarro_y_valle.Models;
+using proyecto_si8811a_2024_ii_u1_apis_y_funciones_jarro_y_valle.Settings;
 
-namespace proyecto_si8811a_2024_ii_u1_desarrollo_api_back.Services
+
+
+namespace proyecto_si8811a_2024_ii_u1_apis_y_funciones_jarro_y_valle.Services
 {
     public class EventoService
     {

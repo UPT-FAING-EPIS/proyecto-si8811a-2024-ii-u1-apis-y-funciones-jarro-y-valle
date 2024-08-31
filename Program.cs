@@ -1,6 +1,6 @@
-using proyecto_si8811a_2024_ii_u1_desarrollo_api_back.Models;
-using proyecto_si8811a_2024_ii_u1_desarrollo_api_back.Services;
-using proyecto_si8811a_2024_ii_u1_desarrollo_api_back.Settings;
+using proyecto_si8811a_2024_ii_u1_apis_y_funciones_jarro_y_valle.Models;
+using proyecto_si8811a_2024_ii_u1_apis_y_funciones_jarro_y_valle.Services;
+using proyecto_si8811a_2024_ii_u1_apis_y_funciones_jarro_y_valle.Settings;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
@@ -32,7 +32,7 @@ builder.Services.AddSingleton<IMongoClient>(s =>
     return new MongoClient(settings.ConnectionString);
 });
 
-// Agregar servicios especÃ­ficos
+// Agregar servicios específicos
 builder.Services.AddSingleton<EventoService>();
 
 // Configurar Swagger
@@ -41,12 +41,8 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configurar el pipeline de solicitudes
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 // Aplicar CORS
 app.UseCors("AllowAllOrigins");
@@ -55,6 +51,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Urls.Add("http://0.0.0.0:9090");
 
 app.Run();
