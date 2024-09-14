@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\source\\repos\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle.csproj": {}
+    "C:\\Users\\HP\\source\\repos\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle-develop\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\source\\repos\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle.csproj": {
+    "C:\\Users\\HP\\source\\repos\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle-develop\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\source\\repos\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\source\\repos\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle-develop\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle.csproj",
         "projectName": "proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle",
-        "projectPath": "C:\\Users\\HP\\source\\repos\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle.csproj",
+        "projectPath": "C:\\Users\\HP\\source\\repos\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle-develop\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\source\\repos\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle\\obj\\",
+        "outputPath": "C:\\Users\\HP\\source\\repos\\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle-develop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

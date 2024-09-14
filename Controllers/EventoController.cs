@@ -18,8 +18,10 @@ namespace proyecto_si8811a_2024_ii_u1_apis_y_funciones_jarro_y_valle.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Evento>>> GetEventos()
         {
-            return await _eventoService.GetAsync();
+            var eventos = await _eventoService.GetAsync();
+            return Ok(eventos);
         }
+
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Evento>> GetEvento(string id)
