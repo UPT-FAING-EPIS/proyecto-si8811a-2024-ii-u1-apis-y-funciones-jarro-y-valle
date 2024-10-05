@@ -123,3 +123,129 @@ classDiagram
 ---
 
 Gracias por tu interés en el proyecto SI-8811. ¡Esperamos tus contribuciones y feedback!
+
+## Swagger UI
+
+### API Documentation
+
+This project includes an API that allows you to manage events. Below are the details of the API endpoints defined in the Swagger UI.
+
+### Base URL
+`http://localhost:33041/swagger/v1/swagger.json`
+
+### Endpoints
+
+#### Evento
+
+- **GET** `/Evento`
+  - **Description**: Retrieves a list of events.
+  - **Responses**:
+    - **200**: Success
+      - **Media Type**: `text/plain`
+      - **Example Value**:
+      ```json
+      [
+        {
+          "id": "string",
+          "nombre": "string",
+          "fechaInicio": "2024-10-05T21:31:41.596Z",
+          "fechaTermino": "2024-10-05T21:31:41.596Z",
+          "facultad": "string"
+        }
+      ]
+      ```
+
+- **POST** `/Evento`
+  - **Description**: Creates a new event.
+  - **Request Body** (application/json):
+    - **Example Value**:
+    ```json
+    {
+      "id": "string",
+      "nombre": "string",
+      "fechaInicio": "2024-10-05T21:31:41.597Z",
+      "fechaTermino": "2024-10-05T21:31:41.597Z",
+      "facultad": "string"
+    }
+    ```
+  - **Responses**:
+    - **200**: Success
+      - **Media Type**: `text/plain`
+      - **Example Value**:
+      ```json
+      {
+        "id": "string",
+        "nombre": "string",
+        "fechaInicio": "2024-10-05T21:31:41.598Z",
+        "fechaTermino": "2024-10-05T21:31:41.598Z",
+        "facultad": "string"
+      }
+      ```
+
+- **GET** `/Evento/{id}`
+  - **Description**: Retrieves a specific event by its ID.
+  - **Parameters**:
+    - **id**: `string` (path) - The ID of the event.
+  - **Responses**:
+    - **200**: Success
+      - **Media Type**: `text/plain`
+      - **Example Value**:
+      ```json
+      {
+        "id": "string",
+        "nombre": "string",
+        "fechaInicio": "2024-10-05T21:31:41.599Z",
+        "fechaTermino": "2024-10-05T21:31:41.599Z",
+        "facultad": "string"
+      }
+      ```
+
+- **PUT** `/Evento/{id}`
+  - **Description**: Updates a specific event by its ID.
+  - **Parameters**:
+    - **id**: `string` (path) - The ID of the event.
+  - **Request Body** (application/json):
+    - **Example Value**:
+    ```json
+    {
+      "id": "string",
+      "nombre": "string",
+      "fechaInicio": "2024-10-05T21:31:41.600Z",
+      "fechaTermino": "2024-10-05T21:31:41.600Z",
+      "facultad": "string"
+    }
+    ```
+  - **Responses**:
+    - **200**: Success
+      - **Media Type**: `text/plain`
+      - **Example Value**:
+      ```json
+      {
+        "id": "string",
+        "nombre": "string",
+        "fechaInicio": "2024-10-05T21:31:41.600Z",
+        "fechaTermino": "2024-10-05T21:31:41.600Z",
+        "facultad": "string"
+      }
+      ```
+
+- **DELETE** `/Evento/{id}`
+  - **Description**: Deletes a specific event by its ID.
+  - **Parameters**:
+    - **id**: `string` (path) - The ID of the event.
+  - **Responses**:
+    - **200**: Success
+
+### Schema
+
+#### Evento
+```json
+{
+  "id": "string",
+  "nombre": "string",
+  "fechaInicio": "string($date-time)",
+  "fechaTermino": "string($date-time)",
+  "facultad": "string"
+}
+```
+
