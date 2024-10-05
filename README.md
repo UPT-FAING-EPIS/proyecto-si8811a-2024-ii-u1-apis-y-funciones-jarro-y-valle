@@ -76,43 +76,24 @@ Bienvenido al proyecto SI-8811, una API para gestionar eventos utilizando .NET y
 - La documentación del proyecto está actualizada en el **README** y se han incluido diagramas en formato **Mermaid**. Asegúrate de revisar estos diagramas para una comprensión visual del sistema.
 
 ```mermaid
-classDiagram
-    class Evento {
-        +string Id
-        +string Nombre
-        +DateTime FechaInicio
-        +DateTime FechaTermino
-        +string Facultad
-    }
+flowchart TD
+    A[Inicio] --> B[Solicitar evento]
+    B --> C{Tipo de operación}
+    C -->|Leer| D[Obtener eventos]
+    C -->|Crear| E[Crear nuevo evento]
+    C -->|Actualizar| F[Actualizar evento existente]
+    C -->|Eliminar| G[Eliminar evento]
+    
+    D --> H[Retornar lista de eventos]
+    E --> I[Retornar evento creado]
+    F --> J[Retornar evento actualizado]
+    G --> K[Retornar confirmación de eliminación]
 
-    class EventoService {
-        -IMongoCollection<Evento> _eventos
-        +EventoService(IOptions<MongoDBSettings> settings)
-        +Task<List<Evento>> GetAsync()
-        +Task<Evento> GetByIdAsync(string id)
-        +Task<Evento> CreateAsync(Evento nuevoEvento)
-        +Task<Evento> UpdateAsync(string id, Evento evento)
-        +Task DeleteAsync(string id)
-    }
+    H --> L[Fin]
+    I --> L
+    J --> L
+    K --> L
 
-    class EventoController {
-        -EventoService _eventoService
-        +EventoController(EventoService eventoService)
-        +Task<ActionResult<IEnumerable<Evento>>> GetEventos()
-        +Task<ActionResult<Evento>> GetEvento(string id)
-        +Task<ActionResult<Evento>> CreateEvento(Evento evento)
-        +Task<ActionResult<Evento>> UpdateEvento(string id, Evento evento)
-        +Task<ActionResult> DeleteEvento(string id)
-    }
-
-    class MongoDBSettings {
-        +string ConnectionString
-        +string DatabaseName
-    }
-
-    EventoController --> EventoService : usa
-    EventoService --> Evento : manipula
-    EventoService --> MongoDBSettings : usa
 ```
 
 ## Exposición
