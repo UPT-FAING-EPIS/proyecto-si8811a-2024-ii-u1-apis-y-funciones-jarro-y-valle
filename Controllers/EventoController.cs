@@ -47,5 +47,16 @@ namespace proyecto_si8811a_2024_ii_u1_apis_y_funciones_jarro_y_valle.Controllers
             await _eventoService.DeleteAsync(id);
             return NoContent();
         }
+
+        [HttpGet("buscarPorNombre/{nombre}")]
+        public async Task<ActionResult<IEnumerable<Evento>>> GetEventoPorNombre(string nombre)
+        {
+            var eventos = await _eventoService.GetByNombreAsync(nombre);
+            if (eventos == null || eventos.Count == 0)
+        {
+            return NotFound();
+        }
+            return Ok(eventos);
+        }
     }
 }
