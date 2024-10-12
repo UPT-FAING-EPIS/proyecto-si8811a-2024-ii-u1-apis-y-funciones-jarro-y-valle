@@ -1,5 +1,5 @@
 
-# Proyecto SI-8811
+# Proyecto SI-8811-A
 
 Bienvenido al proyecto SI-8811, una API para gestionar eventos utilizando .NET y MongoDB. Este proyecto está diseñado para facilitar la creación, lectura, actualización y eliminación de eventos en un entorno académico.
 
