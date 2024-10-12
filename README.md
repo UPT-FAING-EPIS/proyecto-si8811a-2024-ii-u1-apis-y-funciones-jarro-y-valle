@@ -126,18 +126,19 @@ Gracias por tu interés en el proyecto SI-8811. ¡Esperamos tus contribuciones y
 '''
 
 
-### API Documentation
+# API Documentation
 
-Este proyecto incluye una API que le permite gestionar eventos. A continuación se muestran los detalles de los puntos finales de API definidos en la interfaz de usuario de Swagger.
-### Base URL
-`http://localhost:33041/swagger/v1/swagger.json`
+Este proyecto incluye una API para gestionar eventos. A continuación se detallan los puntos finales de la API definidos en la interfaz de usuario de Swagger.
 
-### Endpoints
+## Base URL
+`http://161.132.48.189:9091/swagger/v1/swagger.json`
 
-#### Evento
+## Endpoints
+
+### Evento
 
 - **GET** `/Evento`
-  - **Description**: Retrieves a list of events.
+  - **Description**: Recupera una lista de eventos.
   - **Responses**:
     - **200**: Success
       - **Media Type**: `text/plain`
@@ -147,24 +148,28 @@ Este proyecto incluye una API que le permite gestionar eventos. A continuación 
         {
           "id": "string",
           "nombre": "string",
-          "fechaInicio": "2024-10-05T21:31:41.596Z",
-          "fechaTermino": "2024-10-05T21:31:41.596Z",
-          "facultad": "string"
+          "fechaInicio": "2024-10-12T19:52:44.222Z",
+          "fechaTermino": "2024-10-12T19:52:44.223Z",
+          "facultad": "string",
+          "resultado": "string",
+          "descripcion": "string"
         }
       ]
       ```
 
 - **POST** `/Evento`
-  - **Description**: Creates a new event.
+  - **Description**: Crea un nuevo evento.
   - **Request Body** (application/json):
     - **Example Value**:
     ```json
     {
       "id": "string",
       "nombre": "string",
-      "fechaInicio": "2024-10-05T21:31:41.597Z",
-      "fechaTermino": "2024-10-05T21:31:41.597Z",
-      "facultad": "string"
+      "fechaInicio": "2024-10-12T19:52:44.224Z",
+      "fechaTermino": "2024-10-12T19:52:44.224Z",
+      "facultad": "string",
+      "resultado": "string",
+      "descripcion": "string"
     }
     ```
   - **Responses**:
@@ -175,16 +180,18 @@ Este proyecto incluye una API que le permite gestionar eventos. A continuación 
       {
         "id": "string",
         "nombre": "string",
-        "fechaInicio": "2024-10-05T21:31:41.598Z",
-        "fechaTermino": "2024-10-05T21:31:41.598Z",
-        "facultad": "string"
+        "fechaInicio": "2024-10-12T19:52:44.224Z",
+        "fechaTermino": "2024-10-12T19:52:44.224Z",
+        "facultad": "string",
+        "resultado": "string",
+        "descripcion": "string"
       }
       ```
 
 - **GET** `/Evento/{id}`
-  - **Description**: Retrieves a specific event by its ID.
+  - **Description**: Recupera un evento específico por su ID.
   - **Parameters**:
-    - **id**: `string` (path) - The ID of the event.
+    - **id**: `string` (path) - El ID del evento.
   - **Responses**:
     - **200**: Success
       - **Media Type**: `text/plain`
@@ -193,25 +200,29 @@ Este proyecto incluye una API que le permite gestionar eventos. A continuación 
       {
         "id": "string",
         "nombre": "string",
-        "fechaInicio": "2024-10-05T21:31:41.599Z",
-        "fechaTermino": "2024-10-05T21:31:41.599Z",
-        "facultad": "string"
+        "fechaInicio": "2024-10-12T19:52:44.225Z",
+        "fechaTermino": "2024-10-12T19:52:44.225Z",
+        "facultad": "string",
+        "resultado": "string",
+        "descripcion": "string"
       }
       ```
 
 - **PUT** `/Evento/{id}`
-  - **Description**: Updates a specific event by its ID.
+  - **Description**: Actualiza un evento específico por su ID.
   - **Parameters**:
-    - **id**: `string` (path) - The ID of the event.
+    - **id**: `string` (path) - El ID del evento.
   - **Request Body** (application/json):
     - **Example Value**:
     ```json
     {
       "id": "string",
       "nombre": "string",
-      "fechaInicio": "2024-10-05T21:31:41.600Z",
-      "fechaTermino": "2024-10-05T21:31:41.600Z",
-      "facultad": "string"
+      "fechaInicio": "2024-10-12T19:52:44.226Z",
+      "fechaTermino": "2024-10-12T19:52:44.226Z",
+      "facultad": "string",
+      "resultado": "string",
+      "descripcion": "string"
     }
     ```
   - **Responses**:
@@ -222,29 +233,53 @@ Este proyecto incluye una API que le permite gestionar eventos. A continuación 
       {
         "id": "string",
         "nombre": "string",
-        "fechaInicio": "2024-10-05T21:31:41.600Z",
-        "fechaTermino": "2024-10-05T21:31:41.600Z",
-        "facultad": "string"
+        "fechaInicio": "2024-10-12T19:52:44.226Z",
+        "fechaTermino": "2024-10-12T19:52:44.226Z",
+        "facultad": "string",
+        "resultado": "string",
+        "descripcion": "string"
       }
       ```
 
 - **DELETE** `/Evento/{id}`
-  - **Description**: Deletes a specific event by its ID.
+  - **Description**: Elimina un evento específico por su ID.
   - **Parameters**:
-    - **id**: `string` (path) - The ID of the event.
+    - **id**: `string` (path) - El ID del evento.
   - **Responses**:
     - **200**: Success
 
-### Schema
+- **GET** `/Evento/buscarPorNombre/{nombre}`
+  - **Description**: Busca eventos por su nombre.
+  - **Parameters**:
+    - **nombre**: `string` (path) - El nombre del evento.
+  - **Responses**:
+    - **200**: Success
+      - **Media Type**: `text/plain`
+      - **Example Value**:
+      ```json
+      [
+        {
+          "id": "string",
+          "nombre": "string",
+          "fechaInicio": "2024-10-12T19:52:44.228Z",
+          "fechaTermino": "2024-10-12T19:52:44.228Z",
+          "facultad": "string",
+          "resultado": "string",
+          "descripcion": "string"
+        }
+      ]
+      ```
 
-#### Evento
+## Schema
+
+### Evento
 ```json
 {
   "id": "string",
   "nombre": "string",
   "fechaInicio": "string($date-time)",
   "fechaTermino": "string($date-time)",
-  "facultad": "string"
+  "facultad": "string",
+  "resultado": "string",
+  "descripcion": "string"
 }
-```
-
