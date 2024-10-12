@@ -6,13 +6,12 @@ Bienvenido al proyecto SI-8811, una API para gestionar eventos utilizando .NET y
 
 ```mermaid
 graph TD
-    A[Cliente] -->|POST /api/eventos| B[API (EventosController)]
-    A -->|GET /api/eventos| B
-    A -->|GET /api/eventos/{id}| B
-    A -->|PUT /api/eventos/{id}| B
-    A -->|DELETE /api/eventos/{id}| B
-    B -->|Interacción| C[MongoDB (eventos)]
-```
+    A[Cliente] --> B[API (EventosController)]
+    A --> C[GET /api/eventos]
+    A --> D[GET /api/eventos/{id}]
+    A --> E[PUT /api/eventos/{id}]
+    A --> F[DELETE /api/eventos/{id}]
+    B --> G[MongoDB (eventos)]
 
 ## Índice
 
