@@ -80,6 +80,7 @@ Bienvenido al proyecto SI-8811, una API para gestionar eventos utilizando .NET y
 ## Publicación
 
 - El proyecto ha sido publicado para consumo, pero **no** se encuentra disponible en GitHub.
+- Se utilizó **Elastika** para la gestión y despliegue de la API, facilitando el acceso y la escalabilidad del servicio.
 
 ## Contribución
 
