@@ -82,16 +82,7 @@ Bienvenido al proyecto SI-8811, una API para gestionar eventos utilizando .NET y
 - El proyecto ha sido publicado para consumo, pero **no** se encuentra disponible en GitHub.
 - Se utilizó **Elastika** para la gestión y despliegue de la API, facilitando el acceso y la escalabilidad del servicio.
 
-## Contribución
 
-- Se agradecen las contribuciones al proyecto. Por favor, sigue las siguientes pautas:
-  - Haz un fork del repositorio.
-  - Crea una nueva rama para tu característica o corrección de errores.
-  - Realiza tus cambios y envía un pull request.
-
-## Documentación
-
-- La documentación del proyecto está actualizada en el **README** y se han incluido diagramas en formato **Mermaid**. Asegúrate de revisar estos diagramas para una comprensión visual del sistema.
 
 ```mermaid
 flowchart TD
