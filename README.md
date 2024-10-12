@@ -35,7 +35,7 @@ Bienvenido al proyecto SI-8811, una API para gestionar eventos utilizando .NET y
 - **.NET Core**: Framework para construir la API.
 - **MongoDB**: Base de datos NoSQL para almacenar información de eventos.
 - **Git**: Control de versiones.
-- **GitHub Actions**: Automatización de construcción y despliegue.
+
 
 ## Configuración del Proyecto
 
