@@ -2,18 +2,30 @@
 # Proyecto SI-8811-A
 
 Bienvenido al proyecto SI-8811, una API para gestionar eventos utilizando .NET y MongoDB. Este proyecto está diseñado para facilitar la creación, lectura, actualización y eliminación de eventos en un entorno académico.
-## Mermaid 
+# Diagrama Completo de la API de Eventos
 
 ```mermaid
 graph TD
-    A[Cliente] --> B[API (EventosController)]
-    A --> C[GET /api/eventos]
-    A --> D[GET /api/eventos/{id}]
-    A --> E[PUT /api/eventos/{id}]
-    A --> F[DELETE /api/eventos/{id}]
-    B --> G[MongoDB (eventos)]
+    A[Cliente] -->|POST /api/eventos| B[API Eventos]
+    A -->|GET /api/eventos| B
+    A -->|GET /api/eventos/{id}| B
+    A -->|PUT /api/eventos/{id}| B
+    A -->|DELETE /api/eventos/{id}| B
+    B -->|Interacción| C[MongoDB Eventos]
+    
+    subgraph API
+        B
+        D[Validaciones]
+        E[Autenticación]
+        F[Manejo de Errores]
+    end
+    
+    B --> D
+    B --> E
+    B --> F
+    
+    style API fill:#f9f,stroke:#333,stroke-width:2px
 
-```
 
 
 ## Índice
