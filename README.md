@@ -26,6 +26,7 @@ graph TD
     
     style API fill:#f9f,stroke:#333,stroke-width:2px
 
+```
 
 
 ## Índice
