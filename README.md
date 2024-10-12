@@ -107,6 +107,11 @@ Gracias por tu interés en el proyecto SI-8811. ¡Esperamos tus contribuciones y
 
 ## Swagger UI
 
+## Pruebas Unitarias Api Eventos 
+
+![image](https://github.com/user-attachments/assets/95e925f7-4585-4db8-80e1-af95a3088cbc)
+
+
 ### API Documentation
 
 This project includes an API that allows you to manage events. Below are the details of the API endpoints defined in the Swagger UI.
