@@ -12,7 +12,7 @@ graph TD
     A -->|PUT /api/eventos/{id}| B
     A -->|DELETE /api/eventos/{id}| B
     B -->|Interacción| C[MongoDB Eventos]
-    
+
     subgraph API
         B
         D[Validaciones]
@@ -23,11 +23,9 @@ graph TD
     B --> D
     B --> E
     B --> F
-    
+
     style API fill:#f9f,stroke:#333,stroke-width:2px
-
 ```
-
 
 ## Índice
 
