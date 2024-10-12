@@ -128,8 +128,7 @@ Gracias por tu interés en el proyecto SI-8811. ¡Esperamos tus contribuciones y
 
 ### API Documentation
 
-This project includes an API that allows you to manage events. Below are the details of the API endpoints defined in the Swagger UI.
-
+Este proyecto incluye una API que le permite gestionar eventos. A continuación se muestran los detalles de los puntos finales de API definidos en la interfaz de usuario de Swagger.
 ### Base URL
 `http://localhost:33041/swagger/v1/swagger.json`
 
