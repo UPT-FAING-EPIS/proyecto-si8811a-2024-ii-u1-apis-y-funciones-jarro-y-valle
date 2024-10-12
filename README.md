@@ -120,6 +120,11 @@ Gracias por tu interés en el proyecto SI-8811. ¡Esperamos tus contribuciones y
 
 ![image](https://github.com/user-attachments/assets/95e925f7-4585-4db8-80e1-af95a3088cbc)
 
+'''
+![image](https://github.com/user-attachments/assets/ac102f8b-4b9a-49ba-add3-803c89ab8419)
+
+'''
+
 
 ### API Documentation
 
