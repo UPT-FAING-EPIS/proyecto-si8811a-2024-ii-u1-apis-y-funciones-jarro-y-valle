@@ -9,9 +9,7 @@ Bienvenido al proyecto SI-8811, una API para gestionar eventos utilizando .NET y
 
 ## Diagrama Api .Net
 
-![image](https://github.com/user-attachments/assets/8cf988cd-e7a4-41f2-99e6-06e3438d1c8c)
-
-
+![image](https://github.com/user-attachments/assets/0dfa566b-32c6-45bc-b3f7-a10eae949cac)
 
 
 
