@@ -1,3 +1,10 @@
+## mejoras correcciones 
+#Visualizacion de docker hub con automatizacion ( haciendo referencia al proyecto  de apis y funicones valle y jarro ) 
+# Link de docker hub 
+'''
+https://hub.docker.com/layers/palbertt/proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle/latest/images/sha256-c3f301fe87bab319eeea16870779fe9e272c406a5750b307d51e2091440a35f6?context=explore
+'''
+- ![image](https://github.com/user-attachments/assets/404da337-88f0-4d29-a852-3e467ad9d66d)
 
 # Proyecto SI-8811-A
 
