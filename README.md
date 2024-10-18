@@ -151,6 +151,8 @@ Este proyecto incluye una API para gestionar eventos. A continuación se detalla
 `http://161.132.48.189:9091/swagger/index.html`
 
 ## Endpoints
+![image](https://github.com/user-attachments/assets/937999eb-1c36-4e65-b38e-6e1106279a15)
+
 
 ### Evento
 
