@@ -148,7 +148,7 @@ Gracias por tu interés en el proyecto SI-8811. ¡Esperamos tus contribuciones y
 Este proyecto incluye una API para gestionar eventos. A continuación se detallan los puntos finales de la API definidos en la interfaz de usuario de Swagger.
 
 ## Base URL
-`http://161.132.48.189:9091/swagger/v1/swagger.json`
+`http://161.132.48.189:9091/swagger/index.html`
 
 ## Endpoints
 
