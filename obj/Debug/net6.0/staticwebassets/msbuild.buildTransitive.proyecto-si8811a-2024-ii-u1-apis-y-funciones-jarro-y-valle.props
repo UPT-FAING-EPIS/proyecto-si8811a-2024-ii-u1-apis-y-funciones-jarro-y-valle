@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\proyecto-si8811a-2024-ii-u1-apis-y-funciones-jarro-y-valle.props" />
+</Project>
