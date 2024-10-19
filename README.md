@@ -1,4 +1,40 @@
+# Diagrama de Uso de la API
 
+## Componentes del Diagrama
+- **Cliente (Móvil/Web)**: La interfaz que interactúa con la API.
+- **API en Elastic**: La API que se despliega en Elastic Beanstalk.
+- **MongoDB**: La base de datos donde se almacenan los datos.
+- **Docker Hub**: Repositorio de imágenes Docker (si estás usando Docker para contenedores).
+
+## Flujo de Datos
+1. El **Cliente** realiza solicitudes a la **API**.
+2. La **API** se comunica con **MongoDB** para realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar).
+3. **Docker** puede ser utilizado para empaquetar y desplegar la API, mientras que **Docker Hub** sirve como repositorio de la imagen de la API.
+
+## Diagrama de Uso
+```plaintext
++---------------+       +------------------+       +-----------------+
+|               |       |                  |       |                 |
+|  Cliente      | ----> |      API         | ----> |     MongoDB     |
+| (Móvil/Web)   |       |   (Elastic)      |       |   (Base de     |
+|               | <---- |                  | <---- |    datos)       |
++---------------+       +------------------+       +-----------------+
+      |                         |
+      |                         |
+      |                         |
+      |                         |
+      +------------------------>|
+            (Docker Hub)       |
+                                 |
+                                 |
+                                 +------------------+
+                                 |    Docker Hub     |
+                                 +------------------+
+## Detalles de las Operaciones
+- GET /api/nombre: Obtiene un recurso por nombre desde MongoDB.
+- GET /api/id: Obtiene un recurso por ID desde MongoDB.
+- PUT /api/id: Actualiza un recurso existente en MongoDB.
+- DELETE /api/id: Elimina un recurso de MongoDB
 
 ## mejoras correcciones 
 #Visualizacion de docker hub con automatizacion ( haciendo referencia al proyecto  de apis y funicones valle y jarro ) 
