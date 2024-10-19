@@ -4,7 +4,7 @@
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
 - [Configuración del Proyecto](#configuración-del-proyecto)
 - [Uso de Git](#uso-de-git)
-- [GitHub Actions](#github-actions)
+- [GitHub Actions-(DockerHub)](#github-actions-DockerHub)
 - [Publicación](#publicación)
 - [Contribución](#contribución)
 - [Documentación](#documentación)
