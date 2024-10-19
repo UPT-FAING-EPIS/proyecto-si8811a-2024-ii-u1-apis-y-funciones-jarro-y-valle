@@ -196,7 +196,8 @@ Este proyecto incluye una API para gestionar eventos. A continuación se detalla
   "resultado": "string",
   "descripcion": "string"
 }
+```
 
 
 ## mejoras correcciones 
-#Visualizacion de docker hub con automatizacion ( haciendo referencia al proyecto  de apis y funicones valle y jarro ) 
+   - Visualizacion de docker hub con automatizacion ( haciendo referencia al proyecto  de apis y funicones valle y jarro ) 
