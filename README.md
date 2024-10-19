@@ -302,3 +302,97 @@ Este proyecto incluye una API para gestionar eventos. A continuación se detalla
   "resultado": "string",
   "descripcion": "string"
 }
+```
+
+
+## Ejemplo PHP
+
+
+### Agregar un Evento
+Este formulario permite agregar un nuevo evento a la API. Al enviar el formulario, se envía una solicitud POST a la API.
+
+```php
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nombre = $_POST['nombre'];
+    $fechaInicio = $_POST['fechaInicio'];
+    $fechaTermino = $_POST['fechaTermino'];
+    $facultad = $_POST['facultad'];
+    $resultado = $_POST['resultado'];
+    $descripcion = $_POST['descripcion'];
+
+    $url = "http://161.132.48.189:9091/Evento"; 
+    $data = json_encode([
+        'nombre' => $nombre,
+        'fechaInicio' => $fechaInicio,
+        'fechaTermino' => $fechaTermino,
+        'facultad' => $facultad,
+        'resultado' => $resultado,
+        'descripcion' => $descripcion,
+    ]);
+
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+    curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    $response = curl_exec($ch);
+    curl_close($ch);
+}
+```
+
+
+### Eliminar un Evento
+Se puede eliminar un evento proporcionando el ID del evento en una solicitud DELETE.
+
+```php
+
+if (isset($_POST['id'])) {
+    $id = $_POST['id'];
+    $url = "http://161.132.48.189:9091/Evento/" . urlencode($id);
+
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+    curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+    $response = curl_exec($ch);
+    curl_close($ch);
+}
+```
+
+
+### Modificar un Evento
+Este formulario permite modificar los detalles de un evento existente. Al enviar el formulario, se envía una solicitud PUT a la API.
+
+```php
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $id = $_POST['id'];
+    $nombre = $_POST['nombre'];
+    $fechaInicio = $_POST['fechaInicio'] . ':00Z';
+    $fechaTermino = $_POST['fechaTermino'] . ':00Z';
+    $facultad = $_POST['facultad'];
+    $resultado = $_POST['resultado'];
+    $descripcion = $_POST['descripcion'];
+
+    $url = "http://161.132.48.189:9091/Evento/$id"; 
+    $data = json_encode([
+        'id' => (string)$id,
+        'nombre' => $nombre,
+        'fechaInicio' => $fechaInicio,
+        'fechaTermino' => $fechaTermino,
+        'facultad' => $facultad,
+        'resultado' => $resultado,
+        'descripcion' => $descripcion,
+    ]);
+
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+    curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    $response = curl_exec($ch);
+    curl_close($ch);
+}
+
+```
