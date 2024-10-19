@@ -108,10 +108,8 @@ flowchart TD
 
 ![image](https://github.com/user-attachments/assets/95e925f7-4585-4db8-80e1-af95a3088cbc)
 
-'''
-![image](https://github.com/user-attachments/assets/ac102f8b-4b9a-49ba-add3-803c89ab8419)
 
-'''
+![image](https://github.com/user-attachments/assets/ac102f8b-4b9a-49ba-add3-803c89ab8419)
 
 
 
@@ -120,11 +118,16 @@ flowchart TD
 Bienvenido al proyecto SI-8811, una API para gestionar eventos utilizando .NET y MongoDB. Este proyecto está diseñado para facilitar la creación, lectura, actualización y eliminación de eventos en un entorno académico.
 
 
+## Swagger UI
+# API Documentation
 
+Este proyecto incluye una API para gestionar eventos. A continuación se detallan los puntos finales de la API definidos en la interfaz de usuario de Swagger.
 
+## Base URL
+`http://161.132.48.189:9091/swagger/index.html`
 
-
-
+## Endpoints
+![image](https://github.com/user-attachments/assets/937999eb-1c36-4e65-b38e-6e1106279a15)
 
 
 ## Tecnologías Utilizadas
@@ -171,10 +174,6 @@ Bienvenido al proyecto SI-8811, una API para gestionar eventos utilizando .NET y
 Gracias por tu interés en el proyecto SI-8811. ¡Esperamos tus contribuciones y feedback!
 
 ## Swagger UI
-
-
-
-
 # API Documentation
 
 Este proyecto incluye una API para gestionar eventos. A continuación se detallan los puntos finales de la API definidos en la interfaz de usuario de Swagger.
@@ -185,8 +184,6 @@ Este proyecto incluye una API para gestionar eventos. A continuación se detalla
 ## Endpoints
 ![image](https://github.com/user-attachments/assets/937999eb-1c36-4e65-b38e-6e1106279a15)
 
-
-## Schema
 
 ### Evento
 ```json
@@ -199,100 +196,7 @@ Este proyecto incluye una API para gestionar eventos. A continuación se detalla
   "resultado": "string",
   "descripcion": "string"
 }
-```
 
-
-## Ejemplo PHP
-
-
-### Agregar un Evento
-Este formulario permite agregar un nuevo evento a la API. Al enviar el formulario, se envía una solicitud POST a la API.
-
-```php
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nombre = $_POST['nombre'];
-    $fechaInicio = $_POST['fechaInicio'];
-    $fechaTermino = $_POST['fechaTermino'];
-    $facultad = $_POST['facultad'];
-    $resultado = $_POST['resultado'];
-    $descripcion = $_POST['descripcion'];
-
-    $url = "http://161.132.48.189:9091/Evento"; 
-    $data = json_encode([
-        'nombre' => $nombre,
-        'fechaInicio' => $fechaInicio,
-        'fechaTermino' => $fechaTermino,
-        'facultad' => $facultad,
-        'resultado' => $resultado,
-        'descripcion' => $descripcion,
-    ]);
-
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-    curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-    $response = curl_exec($ch);
-    curl_close($ch);
-}
-```
-
-
-### Eliminar un Evento
-Se puede eliminar un evento proporcionando el ID del evento en una solicitud DELETE.
-
-```php
-
-if (isset($_POST['id'])) {
-    $id = $_POST['id'];
-    $url = "http://161.132.48.189:9091/Evento/" . urlencode($id);
-
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
-    curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-    $response = curl_exec($ch);
-    curl_close($ch);
-}
-```
-
-
-### Modificar un Evento
-Este formulario permite modificar los detalles de un evento existente. Al enviar el formulario, se envía una solicitud PUT a la API.
-
-```php
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id = $_POST['id'];
-    $nombre = $_POST['nombre'];
-    $fechaInicio = $_POST['fechaInicio'] . ':00Z';
-    $fechaTermino = $_POST['fechaTermino'] . ':00Z';
-    $facultad = $_POST['facultad'];
-    $resultado = $_POST['resultado'];
-    $descripcion = $_POST['descripcion'];
-
-    $url = "http://161.132.48.189:9091/Evento/$id"; 
-    $data = json_encode([
-        'id' => (string)$id,
-        'nombre' => $nombre,
-        'fechaInicio' => $fechaInicio,
-        'fechaTermino' => $fechaTermino,
-        'facultad' => $facultad,
-        'resultado' => $resultado,
-        'descripcion' => $descripcion,
-    ]);
-
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
-    curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-    $response = curl_exec($ch);
-    curl_close($ch);
-}
-
-```
 
 ## mejoras correcciones 
 #Visualizacion de docker hub con automatizacion ( haciendo referencia al proyecto  de apis y funicones valle y jarro ) 
