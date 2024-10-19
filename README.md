@@ -8,6 +8,11 @@
 - [Publicación](#publicación)
 - [Contribución](#contribución)
 - [Documentación](#documentación)
+
+  # Proyecto SI-8811-A
+
+Bienvenido al proyecto SI-8811, una API para gestionar eventos utilizando .NET y MongoDB. Este proyecto está diseñado para facilitar la creación, lectura, actualización y eliminación de eventos en un entorno académico.
+
   
 # Integrantes 
  - Jose Luis Jarro C.
@@ -111,11 +116,6 @@ flowchart TD
 
 ![image](https://github.com/user-attachments/assets/ac102f8b-4b9a-49ba-add3-803c89ab8419)
 
-
-
-# Proyecto SI-8811-A
-
-Bienvenido al proyecto SI-8811, una API para gestionar eventos utilizando .NET y MongoDB. Este proyecto está diseñado para facilitar la creación, lectura, actualización y eliminación de eventos en un entorno académico.
 
 
 ## Swagger UI
