@@ -1,5 +1,7 @@
 # Diagrama de Uso de la API
 
+# Diagrama de Uso de la API
+
 ## Componentes del Diagrama
 - **Cliente (Móvil/Web)**: La interfaz que interactúa con la API.
 - **API en Elastic**: La API que se despliega en Elastic Beanstalk.
@@ -30,6 +32,8 @@
                                  +------------------+
                                  |    Docker Hub     |
                                  +------------------+
+'''
+
 ## Detalles de las Operaciones
 - GET /api/nombre: Obtiene un recurso por nombre desde MongoDB.
 - GET /api/id: Obtiene un recurso por ID desde MongoDB.
