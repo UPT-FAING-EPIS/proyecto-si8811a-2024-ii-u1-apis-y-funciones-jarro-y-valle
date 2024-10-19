@@ -32,7 +32,7 @@
                                  +------------------+
                                  |    Docker Hub     |
                                  +------------------+
-'''
+  ```
 
 ## Detalles de las Operaciones
 - GET /api/nombre: Obtiene un recurso por nombre desde MongoDB.
