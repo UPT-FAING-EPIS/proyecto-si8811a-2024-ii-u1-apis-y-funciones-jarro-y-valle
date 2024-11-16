@@ -1,4 +1,7 @@
 1.0
+## Imagen de la aplicacion
+La aplicacion puede encontrarse en Docker Hub con el nombre de gus322/vj_evento. Pero para ejecutarse requiere obtener la linea de conexion que trabaje con la misma base de datos en MongoDB que cumpla con el modelo trabajado en el proyecto. Por ejemplo: docker run -e VJ_CONNECTION_STRING="cadena de conexion" -p 9091:9091 gus322/vj_evento:latest
+
 
 ## Readme de  develop 1 
 
